@@ -164,6 +164,7 @@ body {
 #hero{
   height: 90vh;
   width: 100%;
+  background: #343f4f;
   background-size: cover;
   background-position: top 25% right 0;
   padding: 0 80px;
@@ -581,53 +582,63 @@ footer .Copyright{
 }
 
 /* configuração slides */
-.slider {
-  margin: 0 auto;
-  width: 800px;
-  height: 400px;
+
+.wrapper{
+  max-width: 1200px;
+  min-height: 40vh;
+  padding: 0 35px;
+  position: relative;
+
+}
+.wrapper .carousel{
+  white-space: nowrap;
+  font-size: 0px;
+  cursor: pointer;
   overflow: hidden;
 }
 
-.slides{
-  width: 400%;
-  height: 400px;
-  display: flex;
+.carousel img{
+  height: 340px;
+  object-fit: cover;
+  width: calc(100%/3);
+  margin-left: 14px;
 }
 
-.slides input{
-  display: none;
+.carousel img:first-child{
+  margin-left: 0px;
 }
 
-.slide{
-  width: 25%;
-  position: relative;
-}
-
-.slide img{
-  width: 800px;
-}
-
-.manual-navigation{
+.wrapper i{
+  top: 50%;
+  background: #fff;
+  height: 46px;
+  width: 46px;
   position: absolute;
-  width: 800px;
-  margin-top: -40px;
-  display: flex;
-  justify-content: center;
-}
-
-.manual-btn{
-  border: 2px solid #000000;
-  padding: 5px;
-  border-radius: 10px;
+  text-align: center;
+  line-height: 46px;
   cursor: pointer;
-  transition: 1s;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+}
+
+.wrapper i:first-child{
+  left: -23px;
 }
 
 
-.manual-btn:not(:last-child){
-  margin-right: 40px;
+.wrapper i:last-child{
+  right: -23px;
 }
 
-.manual-btn:hover{
-  background-color: #000000;
+@media screen and (max-width: 900px) {
+  .carousel img{
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img{
+    width:  100%;
+  }
 }
