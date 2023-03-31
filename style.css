@@ -97,6 +97,7 @@ body {
   width: 100%;
 }
 
+
 /*Header inicio*/
 
 #header{
@@ -160,13 +161,11 @@ body {
 }
 
 /*Hero Section Inicio*/
-
+/*
 #hero{
-  height: 90vh;
   width: 100%;
   background: #343f4f;
   background-size: cover;
-  background-position: top 25% right 0;
   padding: 0 80px;
   display: flex;
   flex-direction: column;
@@ -192,7 +191,7 @@ body {
   cursor: pointer;
   font-weight: 700;
   font-size: 15px;
-}
+}*/
 /*Box Meio - Mid BOX*/
 
 #feature{
@@ -583,62 +582,43 @@ footer .Copyright{
 
 /* configuração slides */
 
-.wrapper{
-  max-width: 1200px;
-  min-height: 40vh;
-  padding: 0 35px;
+.carousel-container {
+  width: 100%;
   position: relative;
-
-}
-.wrapper .carousel{
-  white-space: nowrap;
-  font-size: 0px;
-  cursor: pointer;
-  overflow: hidden;
+  left: 0;
+  top: 0;
+  z-index: 1; /* ajuste o valor de z-index conforme necessário */
 }
 
-.carousel img{
-  height: 340px;
-  object-fit: cover;
-  width: calc(100%/3);
-  margin-left: 14px;
+#carousel {
+  position: relative;
+  z-index: 2; /* ajuste o valor de z-index conforme necessário */
 }
 
-.carousel img:first-child{
-  margin-left: 0px;
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
-.wrapper i{
-  top: 50%;
-  background: #fff;
-  height: 46px;
-  width: 46px;
-  position: absolute;
-  text-align: center;
-  line-height: 46px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 1.2rem;
-  transform: translateY(-50%);
+/* começo media query*/
+@media(max-width:500px){
+  #navbar{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      right: 0px;
+      height: 100vh;
+      width: 300px;
+      background-color: #e3e6f3;
+      box-shadow: 0 40px 60px rgba(0 , 0, 0, 0.03);
+      padding: 80px 0 0 10px;
 }
-
-.wrapper i:first-child{
-  left: -23px;
-}
-
-
-.wrapper i:last-child{
-  right: -23px;
-}
-
-@media screen and (max-width: 900px) {
-  .carousel img{
-    width: calc(100% / 2);
-  }
-}
-
-@media screen and (max-width: 550px) {
-  .carousel img{
-    width:  100%;
-  }
 }
